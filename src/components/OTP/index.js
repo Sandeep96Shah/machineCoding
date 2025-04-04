@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const OTP = () => {
+  const navigate = useNavigate();
   const otpCount = 6;
   const [inputList, setInputList] = useState(new Array(otpCount).fill(""));
   const inputListRef = useRef([]);
@@ -22,8 +24,11 @@ const OTP = () => {
     inputListRef.current[0]?.focus();
   }, []);
 
+  const handleBack = () => navigate(-1);
+
   return (
     <div>
+      <button onClick={handleBack}>Home</button>
       <h1>OTP</h1>
       {inputList?.map((input, index) => (
         <input
