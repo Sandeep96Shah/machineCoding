@@ -11,6 +11,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("otp-input")}>OTP Input</button>
       <button onClick={() => handlenavigate("tab-form")}>Tab Form</button>
       <button onClick={() => handlenavigate("table-pagination")}>Table Pagination</button>
+      <button onClick={() => handlenavigate("auto-complete")}>Auto Complete</button>
     </div>
   );
 };
