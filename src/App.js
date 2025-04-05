@@ -3,6 +3,7 @@ import OTP from './components/OTP';
 import TabForm from './components/TabForm';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
+import TablePagination from './components/TablePagination';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/otp-input' element={<OTP />} />
         <Route path='tab-form' element={<TabForm />} />
+        <Route path='table-pagination' element={<TablePagination />} />
       </Routes>
     </div>
   );
