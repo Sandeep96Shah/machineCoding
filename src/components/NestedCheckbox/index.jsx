@@ -30,20 +30,6 @@ const Checkbox = ({
           return updatedCheckedResult;
         };
 
-        const getValue = ({ data }) => {
-          let isChecked = false;
-          for (let i = 0; i < data?.length; i++) {
-            if (!checkboxResult?.[data?.[i]?.id]) {
-              return false;
-            }
-            isChecked = data?.[i]?.children
-              ? getValue({ data: data?.[i]?.children })
-              : true;
-            if (!isChecked) return false;
-          }
-          return isChecked;
-        };
-
         const getParentChildrenNodes = ({ childrenList }) => {
           let finalChildrenNodes = [];
           for (let i = 0; i < childrenList?.length; i++) {
