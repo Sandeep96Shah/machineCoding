@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { data } from "./data";
 import "./nestedCheckbox.css";
 
-const Checkbox = ({ data, checkboxResult, setCheckboxResult }) => {
-  console.log({ sandeep999: checkboxResult });
+const Checkbox = ({
+  data,
+  checkboxResult,
+  setCheckboxResult,
+  allData,
+  parentNode = null,
+}) => {
   return (
     <>
       {data.map((node) => {
@@ -13,11 +18,6 @@ const Checkbox = ({ data, checkboxResult, setCheckboxResult }) => {
           updatedCheckedResult,
         }) => {
           data?.forEach((node) => {
-            console.log({ sandeepChildren: [node?.name] });
-            // setCheckboxResult((prevChecked) => ({
-            //   ...prevChecked,
-            //   [node?.id]: isChecked,
-            // }));
             updatedCheckedResult[node?.id] = isChecked;
             if (node?.children) {
               updatedCheckedResult = updateAllChildrenNode({
@@ -26,7 +26,6 @@ const Checkbox = ({ data, checkboxResult, setCheckboxResult }) => {
                 updatedCheckedResult,
               });
             }
-            
           });
           return updatedCheckedResult;
         };
@@ -34,10 +33,6 @@ const Checkbox = ({ data, checkboxResult, setCheckboxResult }) => {
         const getValue = ({ data }) => {
           let isChecked = false;
           for (let i = 0; i < data?.length; i++) {
-            console.log({
-              sandeep1: "Inside GetValue",
-              [data?.[i]?.name]: data?.[i]?.name,
-            });
             if (!checkboxResult?.[data?.[i]?.id]) {
               return false;
             }
@@ -49,13 +44,28 @@ const Checkbox = ({ data, checkboxResult, setCheckboxResult }) => {
           return isChecked;
         };
 
+        const getParentChildrenNodes = ({childrenList}) => {
+        for(let i = 0; i < childrenList?.length; i++){
+            if(childrenList[i]?.id === parentNode){
+                return childrenList[i]?.children;
+            }
+            if(childrenList[i]?.children){
+                return getParentChildrenNodes({childrenList: childrenList[i]?.children})
+            }
+            return [];
+        }
+        };
+
+        const getParentValue = ({ resultChecked, childrenNodes }) => {
+          let isChecked = true;
+        for(let i = 0; i < childrenNodes?.length; i++){
+            isChecked = isChecked && resultChecked[childrenNodes[i]?.id]
+        }
+          return isChecked;
+        };
+
         const handleOnChange = (e) => {
           const isChecked = e?.target?.checked;
-          //   setCheckboxResult((prevResult) => ({
-          //     ...prevResult,
-          //     [node?.id]: isChecked,
-          //   }));
-          //   updateAllChildrenNode({ data: node?.children, isChecked });
           setCheckboxResult((prevResult) => {
             let updatedCheckedResult = {
               ...prevResult,
@@ -66,6 +76,12 @@ const Checkbox = ({ data, checkboxResult, setCheckboxResult }) => {
               isChecked,
               updatedCheckedResult,
             });
+            const childrenNodes = getParentChildrenNodes({childrenList: allData});
+            const isParentChecked = getParentValue({
+              resultChecked: updatedCheckedResult,
+              childrenNodes,
+            });
+            updatedCheckedResult[parentNode] = isParentChecked;
             return updatedCheckedResult;
           });
         };
@@ -89,6 +105,8 @@ const Checkbox = ({ data, checkboxResult, setCheckboxResult }) => {
                 data={node.children}
                 checkboxResult={checkboxResult}
                 setCheckboxResult={setCheckboxResult}
+                allData={allData}
+                parentNode={node?.id}
               />
             )}
           </div>
@@ -106,6 +124,7 @@ const NestedCheckbox = () => {
         data={data}
         checkboxResult={checkboxResult}
         setCheckboxResult={setCheckboxResult}
+        allData={data}
       />
     </div>
   );
