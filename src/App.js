@@ -6,6 +6,9 @@ import Home from './components/Home';
 import TablePagination from './components/TablePagination';
 import AutoComplete from './components/AutoComplete';
 import ProgressBar from './components/ProgressBar';
+import Form from './components/TabForm1';
+import Counter from './components/Counter';
+import DebounceThrottle from './components/Debounce';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <Route path='table-pagination' element={<TablePagination />} />
         <Route path='auto-complete' element={<AutoComplete />} />
         <Route path='progress-bar' element={<ProgressBar />} />
+        <Route path='tab-form-1' element={<Form />} />
+        <Route path='counter' element={<Counter />} />
+        <Route path='debounce-throttle' element={<DebounceThrottle />} />
       </Routes>
     </div>
   );
