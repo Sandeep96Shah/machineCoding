@@ -44,23 +44,29 @@ const Checkbox = ({
           return isChecked;
         };
 
-        const getParentChildrenNodes = ({childrenList}) => {
-        for(let i = 0; i < childrenList?.length; i++){
-            if(childrenList[i]?.id === parentNode){
-                return childrenList[i]?.children;
+        const getParentChildrenNodes = ({ childrenList }) => {
+          let finalChildrenNodes = [];
+          for (let i = 0; i < childrenList?.length; i++) {
+            if (childrenList[i]?.id === parentNode) {
+              return childrenList[i]?.children;
             }
-            if(childrenList[i]?.children){
-                return getParentChildrenNodes({childrenList: childrenList[i]?.children})
+            if (childrenList[i]?.children) {
+              finalChildrenNodes = getParentChildrenNodes({
+                childrenList: childrenList[i]?.children,
+              });
             }
-            return [];
-        }
+            if (finalChildrenNodes?.length) {
+              return finalChildrenNodes;
+            }
+          }
+          return finalChildrenNodes;
         };
 
         const getParentValue = ({ resultChecked, childrenNodes }) => {
           let isChecked = true;
-        for(let i = 0; i < childrenNodes?.length; i++){
-            isChecked = isChecked && resultChecked[childrenNodes[i]?.id]
-        }
+          for (let i = 0; i < childrenNodes?.length; i++) {
+            isChecked = isChecked && resultChecked[childrenNodes[i]?.id];
+          }
           return isChecked;
         };
 
@@ -76,7 +82,9 @@ const Checkbox = ({
               isChecked,
               updatedCheckedResult,
             });
-            const childrenNodes = getParentChildrenNodes({childrenList: allData});
+            const childrenNodes = getParentChildrenNodes({
+              childrenList: allData,
+            });
             const isParentChecked = getParentValue({
               resultChecked: updatedCheckedResult,
               childrenNodes,
