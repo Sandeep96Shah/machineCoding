@@ -25,6 +25,7 @@
     margin-bottom: 5px;
     position: relative;
     color: white;
+    animation: slide 1s 1;
 
     span {
         position: absolute;
@@ -50,4 +51,13 @@
 
 .error {
     background-color: red;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    },
+    100%{
+        transform: translateX(0%);
+    }
 }
