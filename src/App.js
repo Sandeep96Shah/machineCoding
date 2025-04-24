@@ -9,6 +9,7 @@ import ProgressBar from './components/ProgressBar';
 import Form from './components/TabForm1';
 import Counter from './components/Counter';
 import DebounceThrottle from './components/Debounce';
+import Toast from './components/Toast';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='tab-form-1' element={<Form />} />
         <Route path='counter' element={<Counter />} />
         <Route path='debounce-throttle' element={<DebounceThrottle />} />
+        <Route path='toast' element={<Toast />} />
       </Routes>
     </div>
   );

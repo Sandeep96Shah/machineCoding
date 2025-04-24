@@ -16,7 +16,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("tab-form-1")}>Tab Form 1</button>
       <button onClick={() => handlenavigate("counter")}>Counter</button>
       <button onClick={() => handlenavigate("debounce-throttle")}>DebounceThrottle</button>
-      {/* DebounceThrottle */}
+      <button onClick={() => handlenavigate("toast")}>Toast</button>
     </div>
   );
 };
