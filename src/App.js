@@ -10,6 +10,7 @@ import Form from './components/TabForm1';
 import Counter from './components/Counter';
 import DebounceThrottle from './components/Debounce';
 import Toast from './components/Toast';
+import Star from './components/Star';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='counter' element={<Counter />} />
         <Route path='debounce-throttle' element={<DebounceThrottle />} />
         <Route path='toast' element={<Toast />} />
+        <Route path='star' element={<Star />} />
       </Routes>
     </div>
   );
