@@ -18,6 +18,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("debounce-throttle")}>DebounceThrottle</button>
       <button onClick={() => handlenavigate("toast")}>Toast</button>
       <button onClick={() => handlenavigate("star")}>Star</button>
+      <button onClick={() => handlenavigate("pagination")}>Pagination</button>
     </div>
   );
 };
