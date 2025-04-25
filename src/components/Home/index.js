@@ -19,6 +19,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("toast")}>Toast</button>
       <button onClick={() => handlenavigate("star")}>Star</button>
       <button onClick={() => handlenavigate("pagination")}>Pagination</button>
+      <button onClick={() => handlenavigate("dnd")}>DND</button>
     </div>
   );
 };

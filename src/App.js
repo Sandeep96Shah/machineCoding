@@ -12,6 +12,7 @@ import DebounceThrottle from './components/Debounce';
 import Toast from './components/Toast';
 import Star from './components/Star';
 import Pagination from './components/Pagination';
+import DND from './components/DND';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='toast' element={<Toast />} />
         <Route path='star' element={<Star />} />
         <Route path='pagination' element={<Pagination />} />
+        <Route path='dnd' element={<DND />} />
       </Routes>
     </div>
   );
