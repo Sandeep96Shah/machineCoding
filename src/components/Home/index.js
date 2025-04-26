@@ -21,6 +21,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("pagination")}>Pagination</button>
       <button onClick={() => handlenavigate("dnd")}>DND</button>
       <button onClick={() => handlenavigate("file-upload")}>File Upload</button>
+      <button onClick={() => handlenavigate("memory-game")}>Memory Game</button>
     </div>
   );
 };
