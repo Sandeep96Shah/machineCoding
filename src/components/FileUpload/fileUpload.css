@@ -6,8 +6,8 @@
 }
 
 .container {
+    padding: 20px;
     width: 50%;
-    border: 1px solid grey;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
