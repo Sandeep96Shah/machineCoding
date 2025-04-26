@@ -13,6 +13,7 @@ import Toast from './components/Toast';
 import Star from './components/Star';
 import Pagination from './components/Pagination';
 import DND from './components/DND';
+import FileUpload from './components/FileUpload';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='star' element={<Star />} />
         <Route path='pagination' element={<Pagination />} />
         <Route path='dnd' element={<DND />} />
+        <Route path='file-upload' element={<FileUpload />} />
       </Routes>
     </div>
   );
