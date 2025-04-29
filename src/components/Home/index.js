@@ -23,6 +23,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("file-upload")}>File Upload</button>
       <button onClick={() => handlenavigate("memory-game")}>Memory Game</button>
       <button onClick={() => handlenavigate("nested-checkbox")}>Nested Checkbox</button>
+      <button onClick={() => handlenavigate("virtualized-list")}>VirtualizedList</button>
     </div>
   );
 };
