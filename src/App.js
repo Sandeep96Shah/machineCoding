@@ -16,6 +16,7 @@ import DND from './components/DND';
 import FileUpload from './components/FileUpload';
 import MemoryGame from './components/MemoryGame';
 import NestedCheckbox from './components/NestedCheckbox';
+import VirtualizedList from './components/VirtualizedList';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path='file-upload' element={<FileUpload />} />
         <Route path='memory-game' element={<MemoryGame />} />
         <Route path='nested-checkbox' element={<NestedCheckbox />} />
+        <Route path='virtualized-list' element={<VirtualizedList />} />
       </Routes>
     </div>
   );
