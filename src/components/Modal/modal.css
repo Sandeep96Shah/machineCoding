@@ -1,0 +1,96 @@
+.modal-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container .click-me-button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+.modal-body-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aliceblue; */
+    /* position: fixed; */
+    background-color: rgba(0, 0, 0, 0.45); /* translucent black overlay */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.modal-body-container .body-container {
+    width: 500px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.modal-body-container .body-container .modal-content {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.modal-body-container .body-container .header-container {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 0.5px solid grey;
+}
+
+.modal-body-container .body-container .header-container .header-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal-body-container .body-container .header-container .close-icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    color: grey;
+    font-size: 18px;
+}
+
+.modal-body-container .body-container .footer-buttons{
+    padding-top: 10px;
+    border-top: 0.5px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.modal-body-container .body-container .footer-buttons .primary-button,
+.modal-body-container .body-container .footer-buttons .secondary-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: blue;
+}
+
+.modal-body-container .body-container .footer-buttons .secondary-button {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+
+

@@ -41,6 +41,7 @@ const Home = () => {
       >
         Infinite Virtualized List Scroll
       </button>
+      <button onClick={() => handlenavigate("modal")}>Modal</button>{" "}
     </div>
   );
 };
