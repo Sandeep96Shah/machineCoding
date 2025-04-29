@@ -18,6 +18,7 @@ import MemoryGame from "./components/MemoryGame";
 import NestedCheckbox from "./components/NestedCheckbox";
 import VirtualizedList from "./components/VirtualizedList";
 import InfiniteVirtualizedListScroll from "./components/InfiniteVirtualizedListScroll";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -44,7 +45,9 @@ function App() {
           path="infinite-virtualized-list-scroll"
           element={<InfiniteVirtualizedListScroll />}
         />
+        <Route path="modal" element={<Modal />} />
       </Routes>
+      
     </div>
   );
 }
