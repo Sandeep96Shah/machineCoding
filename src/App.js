@@ -19,6 +19,7 @@ import NestedCheckbox from "./components/NestedCheckbox";
 import VirtualizedList from "./components/VirtualizedList";
 import InfiniteVirtualizedListScroll from "./components/InfiniteVirtualizedListScroll";
 import Modal from "./components/Modal";
+import Stepper from "./components/Stepper";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           element={<InfiniteVirtualizedListScroll />}
         />
         <Route path="modal" element={<Modal />} />
+        <Route path="stepper" element={<Stepper />} />
       </Routes>
       
     </div>
