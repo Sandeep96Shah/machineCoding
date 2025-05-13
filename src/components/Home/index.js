@@ -43,6 +43,7 @@ const Home = () => {
       </button>
       <button onClick={() => handlenavigate("modal")}>Modal</button>
       <button onClick={() => handlenavigate("stepper")}>Stepper</button>
+      <button onClick={() => handlenavigate("grid-light")}>Grid Light</button>
     </div>
   );
 };
