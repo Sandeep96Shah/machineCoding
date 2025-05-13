@@ -20,6 +20,7 @@ import VirtualizedList from "./components/VirtualizedList";
 import InfiniteVirtualizedListScroll from "./components/InfiniteVirtualizedListScroll";
 import Modal from "./components/Modal";
 import Stepper from "./components/Stepper";
+import GridLight from "./components/GridLight";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         />
         <Route path="modal" element={<Modal />} />
         <Route path="stepper" element={<Stepper />} />
+        <Route path="grid-light" element={<GridLight />} />
       </Routes>
       
     </div>

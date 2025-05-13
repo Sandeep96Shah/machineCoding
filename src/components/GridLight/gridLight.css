@@ -1,0 +1,22 @@
+.grid-template-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+}
+
+.outer-box {
+  height: 80px;
+  width: 80px;
+  padding: 5px;
+}
+
+.inner-box {
+  border: 1px solid grey;
+  border-radius: 10px;
+  height: 60px;
+  width: 60px;
+}
+
+.filled {
+    background-color: green;
+}
