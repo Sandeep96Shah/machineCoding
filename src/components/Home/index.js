@@ -44,6 +44,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("modal")}>Modal</button>
       <button onClick={() => handlenavigate("stepper")}>Stepper</button>
       <button onClick={() => handlenavigate("grid-light")}>Grid Light</button>
+      <button onClick={() => handlenavigate("selectable-grid")}>Selectable Grid</button>
     </div>
   );
 };
