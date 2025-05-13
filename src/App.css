@@ -1,3 +1,7 @@
+body{
+  font-family: sans-serif;
+}
+
 .otpInput {
   height: 50px;
   width: 50px;
