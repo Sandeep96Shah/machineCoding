@@ -22,6 +22,7 @@ import Modal from "./components/Modal";
 import Stepper from "./components/Stepper";
 import GridLight from "./components/GridLight";
 import SelectableGrid from "./components/SelectableGrid";
+import Table from "./components/Table";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="stepper" element={<Stepper />} />
         <Route path="grid-light" element={<GridLight />} />
         <Route path="selectable-grid" element={<SelectableGrid />} />
+        <Route path="table" element={<Table />} />
       </Routes>
       
     </div>
