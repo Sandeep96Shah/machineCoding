@@ -46,6 +46,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("grid-light")}>Grid Light</button>
       <button onClick={() => handlenavigate("selectable-grid")}>Selectable Grid</button>
       <button onClick={() => handlenavigate("table")}>Table</button>
+      <button onClick={() => handlenavigate("input-chips")}>Input Chips</button>
     </div>
   );
 };
