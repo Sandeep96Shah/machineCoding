@@ -23,6 +23,7 @@ import Stepper from "./components/Stepper";
 import GridLight from "./components/GridLight";
 import SelectableGrid from "./components/SelectableGrid";
 import Table from "./components/Table";
+import InputChips from "./components/InputChips";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="grid-light" element={<GridLight />} />
         <Route path="selectable-grid" element={<SelectableGrid />} />
         <Route path="table" element={<Table />} />
+        <Route path="input-chips" element={<InputChips />} />
       </Routes>
       
     </div>
