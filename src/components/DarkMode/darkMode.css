@@ -1,0 +1,32 @@
+.light-mode {
+    height: 100vh;
+    width: 100vw;
+    --title: black;
+    --content: black;
+    .title {
+      color: var(--title);
+    }
+  
+    .content {
+      color: var(--content);
+    }
+  }
+
+.dark-mode {
+  --title: white;
+  --content: white;
+  --bg-color: black;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: var(--bg-color);
+
+  .title {
+    color: var(--title);
+  }
+
+  .content {
+    color: var(--content);
+  }
+}
+
