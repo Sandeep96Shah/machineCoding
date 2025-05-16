@@ -24,6 +24,7 @@ import GridLight from "./components/GridLight";
 import SelectableGrid from "./components/SelectableGrid";
 import Table from "./components/Table";
 import InputChips from "./components/InputChips";
+import GuessNumber from "./components/GuessNumber";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="selectable-grid" element={<SelectableGrid />} />
         <Route path="table" element={<Table />} />
         <Route path="input-chips" element={<InputChips />} />
+        <Route path="guess-number" element={<GuessNumber />} />
       </Routes>
       
     </div>

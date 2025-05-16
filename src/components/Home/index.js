@@ -47,6 +47,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("selectable-grid")}>Selectable Grid</button>
       <button onClick={() => handlenavigate("table")}>Table</button>
       <button onClick={() => handlenavigate("input-chips")}>Input Chips</button>
+      <button onClick={() => handlenavigate("guess-number")}>Guess Number</button>
     </div>
   );
 };
