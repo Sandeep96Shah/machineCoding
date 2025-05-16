@@ -48,6 +48,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("table")}>Table</button>
       <button onClick={() => handlenavigate("input-chips")}>Input Chips</button>
       <button onClick={() => handlenavigate("guess-number")}>Guess Number</button>
+      <button onClick={() => handlenavigate("dark-mode")}>Dark Mode</button>
     </div>
   );
 };
