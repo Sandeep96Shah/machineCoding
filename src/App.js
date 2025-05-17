@@ -26,6 +26,7 @@ import Table from "./components/Table";
 import InputChips from "./components/InputChips";
 import GuessNumber from "./components/GuessNumber";
 import DarkMode from "./components/DarkMode";
+import GoogleSearch from "./components/GoogleSearch";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
         <Route path="input-chips" element={<InputChips />} />
         <Route path="guess-number" element={<GuessNumber />} />
         <Route path="dark-mode" element={<DarkMode />} />
+        <Route path="google-search" element={<GoogleSearch />} />
       </Routes>
       
     </div>
