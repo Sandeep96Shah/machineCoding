@@ -50,6 +50,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("guess-number")}>Guess Number</button>
       <button onClick={() => handlenavigate("dark-mode")}>Dark Mode</button>
       <button onClick={() => handlenavigate("google-search")}>Google Search</button>
+      <button onClick={() => handlenavigate("accordian")}>Accordian</button>
     </div>
   );
 };
