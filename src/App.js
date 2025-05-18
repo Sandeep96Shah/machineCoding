@@ -28,6 +28,7 @@ import GuessNumber from "./components/GuessNumber";
 import DarkMode from "./components/DarkMode";
 import GoogleSearch from "./components/GoogleSearch";
 import Accordian from "./components/Accordian";
+import ContactForm from "./components/ContactFrom";
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
         <Route path="dark-mode" element={<DarkMode />} />
         <Route path="google-search" element={<GoogleSearch />} />
         <Route path="accordian" element={<Accordian />} />
+        <Route path="contact-form" element={<ContactForm />} />
       </Routes>
       
     </div>
