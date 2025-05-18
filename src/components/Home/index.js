@@ -51,6 +51,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("dark-mode")}>Dark Mode</button>
       <button onClick={() => handlenavigate("google-search")}>Google Search</button>
       <button onClick={() => handlenavigate("accordian")}>Accordian</button>
+      <button onClick={() => handlenavigate("contact-form")}>Contact Form</button>
     </div>
   );
 };
