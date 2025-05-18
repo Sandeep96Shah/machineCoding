@@ -52,6 +52,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("google-search")}>Google Search</button>
       <button onClick={() => handlenavigate("accordian")}>Accordian</button>
       <button onClick={() => handlenavigate("contact-form")}>Contact Form</button>
+      <button onClick={() => handlenavigate("book-flight")}>Book Flight</button>
     </div>
   );
 };
