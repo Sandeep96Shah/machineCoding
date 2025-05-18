@@ -1,0 +1,21 @@
+.accordian-container {
+  cursor: pointer;
+  font-weight: bold;
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  margin-top: 10px;
+}
+
+.accordian-title-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.accordian-content-container {
+  background-color: aliceblue;
+  padding-left: 20px;
+}
