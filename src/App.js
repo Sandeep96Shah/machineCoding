@@ -29,6 +29,7 @@ import DarkMode from "./components/DarkMode";
 import GoogleSearch from "./components/GoogleSearch";
 import Accordian from "./components/Accordian";
 import ContactForm from "./components/ContactFrom";
+import BookFlight from "./components/BookFlight";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
         <Route path="google-search" element={<GoogleSearch />} />
         <Route path="accordian" element={<Accordian />} />
         <Route path="contact-form" element={<ContactForm />} />
+        <Route path="book-flight" element={<BookFlight />} />
       </Routes>
       
     </div>
