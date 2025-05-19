@@ -31,6 +31,7 @@ import Accordian from "./components/Accordian";
 import ContactForm from "./components/ContactFrom";
 import BookFlight from "./components/BookFlight";
 import GenerateTable from "./components/GenerateTable";
+import Tabs from "./components/Tabs";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
         <Route path="contact-form" element={<ContactForm />} />
         <Route path="book-flight" element={<BookFlight />} />
         <Route path="generate-table" element={<GenerateTable />} />
+        <Route path="tabs-1" element={<Tabs />} />
       </Routes>
       
     </div>
