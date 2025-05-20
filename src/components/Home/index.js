@@ -55,6 +55,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("book-flight")}>Book Flight</button>
       <button onClick={() => handlenavigate("generate-table")}>Generate Table</button>
       <button onClick={() => handlenavigate("tabs-1")}>Tabs - 1</button>
+      <button onClick={() => handlenavigate("data-table-1")}>Data Table - 1</button>
     </div>
   );
 };
