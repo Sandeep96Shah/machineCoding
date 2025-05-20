@@ -32,6 +32,7 @@ import ContactForm from "./components/ContactFrom";
 import BookFlight from "./components/BookFlight";
 import GenerateTable from "./components/GenerateTable";
 import Tabs from "./components/Tabs";
+import DataTable from "./components/DataTable1";
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
         <Route path="book-flight" element={<BookFlight />} />
         <Route path="generate-table" element={<GenerateTable />} />
         <Route path="tabs-1" element={<Tabs />} />
+        <Route path="data-table-1" element={<DataTable />} />
       </Routes>
       
     </div>
