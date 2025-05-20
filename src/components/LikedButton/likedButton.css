@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .btn {
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .default {
+    color: #888;
+    border: 1px solid #888;
+  }
+  
+  .liked {
+    background-color: #f00;
+    color: white;
+  }
+  
+  .hover {
+    border: 1px solid #f00;
+    color: #f00;
+  }
+  
+  .default-liked-hover {
+    border: 1px solid #f00;
+    color: #f00;
+    background-color: white;
+  }
+  
