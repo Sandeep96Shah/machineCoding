@@ -35,6 +35,7 @@ import Tabs from "./components/Tabs";
 import DataTable from "./components/DataTable1";
 import DiceRoller from "./components/DiceRoller";
 import LikedButton from "./components/LikedButton";
+import TrafficLight from "./components/TrafficLight";
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
         <Route path="data-table-1" element={<DataTable />} />
         <Route path="dice-roller" element={<DiceRoller />} />
         <Route path="liked-button" element={<LikedButton />} />
+        <Route path="traffic-light" element={<TrafficLight />} />
       </Routes>
       
     </div>
