@@ -33,6 +33,7 @@ import BookFlight from "./components/BookFlight";
 import GenerateTable from "./components/GenerateTable";
 import Tabs from "./components/Tabs";
 import DataTable from "./components/DataTable1";
+import DiceRoller from "./components/DiceRoller";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
         <Route path="generate-table" element={<GenerateTable />} />
         <Route path="tabs-1" element={<Tabs />} />
         <Route path="data-table-1" element={<DataTable />} />
+        <Route path="dice-roller" element={<DiceRoller />} />
       </Routes>
       
     </div>
