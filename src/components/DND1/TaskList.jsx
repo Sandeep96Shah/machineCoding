@@ -6,7 +6,7 @@ const TaskList = ({
   taskTitle,
   onUpdate,
 }) => {
-  const handlePreventDefault = (event) => {
+  const handleOnDragOver = (event) => {
     event.preventDefault();
   };
 
@@ -35,7 +35,7 @@ const TaskList = ({
   return (
     <div
       className="state-container"
-      onDragOver={handlePreventDefault}
+      onDragOver={handleOnDragOver}
       onDrop={(event) =>
         handleOnDrop({ event, status: taskTitle.toLowerCase() })
       }

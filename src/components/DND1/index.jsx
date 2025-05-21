@@ -5,7 +5,7 @@ import "./dnd1.css";
 
 const DND1 = () => {
   const [tasks, setTasks] = useState(dummyTask);
-  const getTasks = (status) =>
+  const getTasksByStatus = (status) =>
     tasks.filter((task) => task.status === status);
 
   const handleOnUpdate = ({ id, status }) => {
@@ -46,17 +46,17 @@ const DND1 = () => {
       </form>
       <div className="dashboard-container">
         <TaskList
-          tasks={getTasks("pending")}
+          tasks={getTasksByStatus("pending")}
           taskTitle="Pending"
           onUpdate={handleOnUpdate}
         />
         <TaskList
-          tasks={getTasks("active")}
+          tasks={getTasksByStatus("active")}
           taskTitle="Active"
           onUpdate={handleOnUpdate}
         />
         <TaskList
-          tasks={getTasks("completed")}
+          tasks={getTasksByStatus("completed")}
           taskTitle="Completed"
           onUpdate={handleOnUpdate}
         />
