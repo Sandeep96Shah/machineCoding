@@ -59,6 +59,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("dice-roller")}>Dice Roller</button>
       <button onClick={() => handlenavigate("liked-button")}>Liked Button</button>
       <button onClick={() => handlenavigate("traffic-light")}>Traffic Light</button>
+      <button onClick={() => handlenavigate("dnd-1")}>DND-1</button>
     </div>
   );
 };
