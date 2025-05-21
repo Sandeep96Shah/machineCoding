@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .state-container {
+    min-height: 400px;
+    width: 33%;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 0 10px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .task {
+    background-color: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  
+  .form-container {
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .fields-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .field-container {
+    display: flex;
+    gap: 5px;
+  }
+  
