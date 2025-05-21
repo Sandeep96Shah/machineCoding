@@ -6,6 +6,8 @@ const TaskList = ({
   taskTitle,
   onUpdate,
 }) => {
+  const taskStatus = taskTitle.toLowerCase()
+  
   const handleOnDragOver = (event) => {
     event.preventDefault();
   };
@@ -37,7 +39,7 @@ const TaskList = ({
       className="state-container"
       onDragOver={handleOnDragOver}
       onDrop={(event) =>
-        handleOnDrop({ event, status: taskTitle.toLowerCase() })
+        handleOnDrop({ event, status: taskStatus })
       }
     >
       <p className="title">{taskTitle}</p>
@@ -50,7 +52,7 @@ const TaskList = ({
         >
           <p>{title}</p>
           <select
-            defaultValue={taskTitle.toLowerCase()}
+            defaultValue={taskStatus}
             onChange={(event) =>
                 handleUpdateTaskStatus({ id, status: event.target.value })
             }
