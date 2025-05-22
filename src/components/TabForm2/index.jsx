@@ -1,8 +1,11 @@
-import React, { useCallback, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Address from "./Address";
 import PersonalDetails from "./PersonalDetails";
 import Preference from "./Preferences";
 import "./tabForm2.css";
+
+const STEP_COMPONENTS = [PersonalDetails, Address, Preference];
+const STEP_KEYS = ["personalDetails", "address", "preference"];
 
 const getKey = (step) => {
   switch (step) {
@@ -15,53 +18,40 @@ const getKey = (step) => {
   }
 };
 
-const getDefaultValues = (step) => {
-  const data = localStorage.getItem(getKey(step)) ?? "";
-  if (!data) return {};
-  return JSON.parse(data);
+const getDefaultValues = (stepKey) => {
+  const data = localStorage.getItem(stepKey);
+  return data ? JSON.parse(data) : {};
 };
 
 const TabForm2 = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const maxStep = useRef(0);
 
-  const handleSubmit = (event) => {
+  const StepComponent = STEP_COMPONENTS[currentStep];
+  const stepkey = STEP_KEYS[currentStep];
+
+  const defaultValue = getDefaultValues(stepkey);
+
+  const handleOnSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const fields = Object.fromEntries(formData);
-    localStorage.setItem(getKey(currentStep), JSON.stringify(fields));
-    maxStep.current = currentStep + 1;
-    if (currentStep === 2) {
-      const result = [0, 1, 2].map((key) => getDefaultValues(key));
+    localStorage.setItem(stepkey, JSON.stringify(fields));
+
+    maxStep.current = Math.max(maxStep.current, currentStep + 1);
+
+    const isLastStep = currentStep === STEP_COMPONENTS.length - 1;
+
+    if (isLastStep) {
+      const result = STEP_KEYS.map(getDefaultValues);
       alert(JSON.stringify(result, null, 2));
-      return;
-    }
-    setCurrentStep((prevStep) => prevStep + 1);
+    } else setCurrentStep((prevStep) => prevStep + 1);
   };
 
-  const handlePrev = () => setCurrentStep((prevStep) => prevStep - 1);
+  const handleOnPrev = () => setCurrentStep((prevStep) => prevStep - 1);
 
   const handleOnTabClick = (step) => {
-    if(step <= maxStep.current) setCurrentStep(step);
-  }
-
-  const renderStepComponent = () => {
-    const props = {
-      onSubmit: handleSubmit,
-      defaultValues: getDefaultValues(currentStep),
-      onPrev: handlePrev,
-    };
-
-    switch (currentStep) {
-      case 0:
-        return <PersonalDetails {...props} />;
-      case 1:
-        return <Address {...props} />;
-      case 2:
-        return <Preference {...props} />;
-      default:
-        return null;
-    }
+    if (step <= maxStep.current) setCurrentStep(step);
   };
 
   return (
@@ -75,19 +65,19 @@ const TabForm2 = () => {
       </div>
 
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleOnSubmit}>
           <div>
-            {renderStepComponent()}
+            <StepComponent defaultValues={defaultValue} />
             <div>
               <button
                 type="button"
                 disabled={currentStep === 0}
-                onClick={handlePrev}
+                onClick={handleOnPrev}
               >
                 Prev
               </button>
               <button type="submit">
-                {currentStep === 2 ? "Submit" : "Next"}
+                {currentStep === STEP_COMPONENTS.length - 1 ? "Submit" : "Next"}
               </button>
             </div>
           </div>

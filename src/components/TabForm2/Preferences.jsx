@@ -3,13 +3,19 @@ import React from "react";
 const Preference = ({ defaultValues = {} }) => {
   const { worktype = "" } = defaultValues;
 
+  const worktypeOptions = [
+    { value: "wfo", label: "WFO" },
+    { value: "wfh", label: "WFH" },
+    { value: "hybrid", label: "Hybrid" },
+  ];
+
   return (
     <div>
       <label htmlFor="worktype">Work Type:</label>
       <select name="worktype" id="worktype" defaultValue={worktype}>
-        <option value="wfo">WFO</option>
-        <option value="wfh">WFH</option>
-        <option value="hybrid">Hybrid</option>
+        {worktypeOptions.map(({ value, label }) => (
+          <option value={value}>{label}</option>
+        ))}
       </select>
     </div>
   );

@@ -1,49 +1,33 @@
 import React from "react";
 
 const PersonalDetails = ({ defaultValues }) => {
-  const { name = "", email = "", password = "", phoneNo = "" } = defaultValues;
+  const fields = [
+    { name: "name", label: "Name", type: "text" },
+    { name: "email", label: "Email", type: "email" },
+    {
+      name: "phoneNo",
+      label: "phone No.",
+      type: "tel",
+      maxLength: 10,
+      inputMode: "numeric",
+    },
+    { name: "password", label: "Password", type: "password" },
+  ];
 
   return (
     <div>
-      <div>
-        <label htmlFor="name">Name</label>
-        <input type="text" name="name" id="name" defaultValue={name} required />
-      </div>
-
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          defaultValue={email}
-          required
-        />
-      </div>
-
-      <div>
-        <label htmlFor="phoneNo">Phone No.</label>
-        <input
-          type="tel"
-          name="phoneNo"
-          defaultValue={phoneNo}
-          id="phoneNo"
-          maxLength={10}
-          inputMode="numeric"
-          required
-        />
-      </div>
-
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          defaultValue={password}
-          id="password"
-          required
-        />
-      </div>
+      {fields.map(({ name, label, type, ...rest }) => (
+        <div key={name}>
+          <label htmlFor={name}>{label}</label>
+          <input
+            type={type}
+            name={name}
+            id={name}
+            defaultValue={defaultValues[name]}
+            {...rest}
+          />
+        </div>
+      ))}
     </div>
   );
 };
