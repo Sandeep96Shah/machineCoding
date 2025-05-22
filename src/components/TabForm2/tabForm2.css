@@ -1,0 +1,11 @@
+.tab-container {
+    display: flex;
+    gap: 30px;
+}
+
+.tab-container .tab{
+    border: 1px solid grey;
+    padding: 5p 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
