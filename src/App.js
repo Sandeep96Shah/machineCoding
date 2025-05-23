@@ -38,6 +38,7 @@ import LikedButton from "./components/LikedButton";
 import TrafficLight from "./components/TrafficLight";
 import DND1 from "./components/DND1";
 import TabForm2 from "./components/TabForm2";
+import TicTacToe from "./components/TicTacToe";
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
         <Route path="traffic-light" element={<TrafficLight />} />
         <Route path="dnd-1" element={<DND1 />} />
         <Route path="tab-form-2" element={<TabForm2 />} />
+        <Route path="tic-tac-toe" element={<TicTacToe />} />
       </Routes>
       
     </div>
