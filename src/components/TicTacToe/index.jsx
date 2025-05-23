@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
-import './index.css';
+import "./index.css";
+
+const DEFUALT_PLAYER = "O";
 
 const WINNER_CELLS = [
   [0, 1, 2],
@@ -13,7 +15,6 @@ const WINNER_CELLS = [
 ];
 
 const determineWinner = (board) => {
-  console.log(board);
   for (let i = 0; i < WINNER_CELLS.length; i++) {
     const [x, y, z] = WINNER_CELLS[i];
     if (
@@ -31,47 +32,45 @@ const getDefaultList = () =>
   Array.from({ length: 9 }, () => ({ player: undefined }));
 
 const TicTacToe = () => {
-  const [{ player }, setPlayer] = useState({ player: "O" });
+  const [{ player }, setPlayer] = useState({ player: DEFUALT_PLAYER });
   let list = useRef(getDefaultList());
-  const winner = determineWinner(list.current);
+
+  const isWinner = determineWinner(list.current);
+  const isDraw = !isWinner && !list.current.some(({ player }) => !player);
 
   const handleOnClick = (index) => {
-    if (list.current[index].player || winner) return;
+    if (list.current[index].player || isWinner) return;
 
     list.current[index].player = player;
 
-    if (determineWinner(list.current)) {
-      setPlayer({ player });
-    } else
+    if (determineWinner(list.current)) setPlayer({ player });
+    else
       setPlayer((prevPlayer) =>
-        prevPlayer.player === "O" ? { player: "X" } : { player: "O" },
+        prevPlayer.player === "O" ? { player: "X" } : { player: "O" }
       );
   };
 
   const handleReset = () => {
-    const confirm = window.confirm("Are you sure you want to Reset?");
-    if (!confirm) return;
+    if (!isWinner && !isDraw) {
+      const confirm = window.confirm("Are you sure you want to Reset?");
+      if (!confirm) return;
+    }
+
     list.current = getDefaultList();
-    setPlayer({ player: "O" });
+    setPlayer({ player: DEFUALT_PLAYER });
   };
 
   const getMatchStatus = () => {
-    if (winner) {
-      return `Player ${player} wins!`;
-    }
+    if (isWinner) return `Player ${player} wins!`;
 
-    if (!list.current.some(({ player }) => !player)) {
-      return "Draw!";
-    }
+    if (isDraw) return "Draw!";
 
     return `Player ${player} turn`;
   };
 
   return (
     <div className="tic-tac-toe-container">
-      <p aria-live="polite" aria-value={getMatchStatus()}>
-        {getMatchStatus()}
-      </p>
+      <p aria-live="polite">{getMatchStatus()}</p>
       <div className="box-container">
         {list.current.map(({ player }, index) => (
           <p key={index} className="box" onClick={() => handleOnClick(index)}>
@@ -84,6 +83,6 @@ const TicTacToe = () => {
       </button>
     </div>
   );
-}
+};
 
 export default TicTacToe;
