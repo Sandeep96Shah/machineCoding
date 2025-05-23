@@ -61,6 +61,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("traffic-light")}>Traffic Light</button>
       <button onClick={() => handlenavigate("dnd-1")}>DND-1</button>
       <button onClick={() => handlenavigate("tab-form-2")}>Tab Form 2</button>
+      <button onClick={() => handlenavigate("tic-tac-toe")}>Tic Tac Toe</button>
     </div>
   );
 };

@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .tic-tac-toe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+  }
+  
+  .box {
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+  }
+  
