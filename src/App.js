@@ -39,6 +39,7 @@ import TrafficLight from "./components/TrafficLight";
 import DND1 from "./components/DND1";
 import TabForm2 from "./components/TabForm2";
 import TicTacToe from "./components/TicTacToe";
+import ListInfiniteScroll from "./components/ListInfiniteScroll";
 
 function App() {
   return (
@@ -86,6 +87,7 @@ function App() {
         <Route path="dnd-1" element={<DND1 />} />
         <Route path="tab-form-2" element={<TabForm2 />} />
         <Route path="tic-tac-toe" element={<TicTacToe />} />
+        <Route path="list-infinite-scroll" element={<ListInfiniteScroll />} />
       </Routes>
       
     </div>
