@@ -63,6 +63,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("tab-form-2")}>Tab Form 2</button>
       <button onClick={() => handlenavigate("tic-tac-toe")}>Tic Tac Toe</button>
       <button onClick={() => handlenavigate("list-infinite-scroll")}>List Infinite Scroll</button>
+      <button onClick={() => handlenavigate("file-explorer-1")}>File Explorer-1</button>
     </div>
   );
 };

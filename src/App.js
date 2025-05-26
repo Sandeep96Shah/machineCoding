@@ -40,6 +40,7 @@ import DND1 from "./components/DND1";
 import TabForm2 from "./components/TabForm2";
 import TicTacToe from "./components/TicTacToe";
 import ListInfiniteScroll from "./components/ListInfiniteScroll";
+import FileExplorer from "./components/FileExplorer";
 
 function App() {
   return (
@@ -88,6 +89,7 @@ function App() {
         <Route path="tab-form-2" element={<TabForm2 />} />
         <Route path="tic-tac-toe" element={<TicTacToe />} />
         <Route path="list-infinite-scroll" element={<ListInfiniteScroll />} />
+        <Route path="file-explorer-1" element={<FileExplorer />} />
       </Routes>
       
     </div>
