@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: antiquewhite;
+  }
+  
+  .job-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 5px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+  }
+  
+  .job-card .title {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  
+  .by-date-container {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: grey;
+  }
+  
+  .btn {
+    background-color: rgb(255, 128, 0);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  

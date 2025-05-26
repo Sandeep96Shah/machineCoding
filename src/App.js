@@ -41,6 +41,7 @@ import TabForm2 from "./components/TabForm2";
 import TicTacToe from "./components/TicTacToe";
 import ListInfiniteScroll from "./components/ListInfiniteScroll";
 import FileExplorer from "./components/FileExplorer";
+import JobBoard from "./components/JobBoard";
 
 function App() {
   return (
@@ -90,6 +91,7 @@ function App() {
         <Route path="tic-tac-toe" element={<TicTacToe />} />
         <Route path="list-infinite-scroll" element={<ListInfiniteScroll />} />
         <Route path="file-explorer-1" element={<FileExplorer />} />
+        <Route path="job-board" element={<JobBoard />} />
       </Routes>
       
     </div>
