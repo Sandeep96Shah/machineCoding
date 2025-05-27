@@ -65,6 +65,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("list-infinite-scroll")}>List Infinite Scroll</button>
       <button onClick={() => handlenavigate("file-explorer-1")}>File Explorer-1</button>
       <button onClick={() => handlenavigate("job-board")}>Job board</button>
+      <button onClick={() => handlenavigate("limit-infinite-list")}>Limit Infinite List</button>
     </div>
   );
 };

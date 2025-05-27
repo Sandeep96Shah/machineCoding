@@ -1,0 +1,11 @@
+.limit-infinite-list-container{
+    height: 400px;
+    overflow: auto;
+    background-color: grey;
+}
+
+.limit-infinite-list-container .item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
