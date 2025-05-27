@@ -42,6 +42,7 @@ import TicTacToe from "./components/TicTacToe";
 import ListInfiniteScroll from "./components/ListInfiniteScroll";
 import FileExplorer from "./components/FileExplorer";
 import JobBoard from "./components/JobBoard";
+import LimitInfiniteList from "./components/LimitInfiniteList";
 
 function App() {
   return (
@@ -92,6 +93,7 @@ function App() {
         <Route path="list-infinite-scroll" element={<ListInfiniteScroll />} />
         <Route path="file-explorer-1" element={<FileExplorer />} />
         <Route path="job-board" element={<JobBoard />} />
+        <Route path="limit-infinite-list" element={<LimitInfiniteList />} />
       </Routes>
       
     </div>
