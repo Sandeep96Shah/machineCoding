@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
 
-const UndoableCounter = () =>  {
+export default function App() {
   const [history, setHistory] = useState([]);
   const [value, setValue] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
@@ -32,16 +32,16 @@ const UndoableCounter = () =>  {
 
   const actionButtons = [
     {
-      title: "Undo",
-      isDisabled: !Boolean(visibleHistory.length) || currentStep === 0,
-      handleOnClick: () => handleNavigateHistory("undo"),
+      name: "Undo",
+      disabled: !Boolean(visibleHistory.length) || currentStep === 0,
+      onClick: () => handleNavigateHistory("undo"),
     },
     {
-      title: "Redo",
-      isDisabled: currentStep === history.length,
-      handleOnClick: () => handleNavigateHistory("redo"),
+      name: "Redo",
+      disabled: currentStep === history.length,
+      onClick: () => handleNavigateHistory("redo"),
     },
-    { title: "Reset", isDisabled: false, handleOnClick: handleReset },
+    { name: "Reset", disabled: false, onClick: handleReset },
   ];
 
   const operations = ["/2", "-1", "value", "+1", "*2"];
@@ -49,9 +49,9 @@ const UndoableCounter = () =>  {
   return (
     <div>
       <div>
-        {actionButtons.map(({ title, isDisabled, handleOnClick }) => (
-          <button disabled={isDisabled} onClick={handleOnClick}>
-            {title}
+        {actionButtons.map(({ name, onClick, disabled }) => (
+          <button disabled={disabled} onClick={onClick}>
+            {name}
           </button>
         ))}
       </div>
@@ -85,5 +85,3 @@ const UndoableCounter = () =>  {
     </div>
   );
 }
-
-export default UndoableCounter;
