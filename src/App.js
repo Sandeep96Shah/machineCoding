@@ -43,6 +43,7 @@ import ListInfiniteScroll from "./components/ListInfiniteScroll";
 import FileExplorer from "./components/FileExplorer";
 import JobBoard from "./components/JobBoard";
 import LimitInfiniteList from "./components/LimitInfiniteList";
+import UndoableCounter from "./components/UndoableCounter";
 
 function App() {
   return (
@@ -94,6 +95,7 @@ function App() {
         <Route path="file-explorer-1" element={<FileExplorer />} />
         <Route path="job-board" element={<JobBoard />} />
         <Route path="limit-infinite-list" element={<LimitInfiniteList />} />
+        <Route path="undoable-counter" element={<UndoableCounter />} />
       </Routes>
       
     </div>
