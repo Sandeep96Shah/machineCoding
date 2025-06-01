@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .operation-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
