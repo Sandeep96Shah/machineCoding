@@ -44,6 +44,7 @@ import FileExplorer from "./components/FileExplorer";
 import JobBoard from "./components/JobBoard";
 import LimitInfiniteList from "./components/LimitInfiniteList";
 import UndoableCounter from "./components/UndoableCounter";
+import PasswordValidator from "./components/PasswordValidator";
 
 function App() {
   return (
@@ -96,6 +97,7 @@ function App() {
         <Route path="job-board" element={<JobBoard />} />
         <Route path="limit-infinite-list" element={<LimitInfiniteList />} />
         <Route path="undoable-counter" element={<UndoableCounter />} />
+        <Route path="password-validator" element={<PasswordValidator />} />
       </Routes>
       
     </div>
