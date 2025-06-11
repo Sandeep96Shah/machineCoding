@@ -1,0 +1,21 @@
+.home-container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.home-container button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.home-container button:hover {
+    color: blue;
+    background-color: rgb(207, 207, 244);
+    border-color: blue;
+}
