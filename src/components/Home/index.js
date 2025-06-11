@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./styles.css";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -7,7 +8,7 @@ const Home = () => {
   const handlenavigate = (to) => navigate(to);
 
   return (
-    <div>
+    <div className="home-container">
       <button onClick={() => handlenavigate("otp-input")}>OTP Input</button>
       <button onClick={() => handlenavigate("tab-form")}>Tab Form</button>
       <button onClick={() => handlenavigate("table-pagination")}>
