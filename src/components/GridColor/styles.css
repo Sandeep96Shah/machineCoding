@@ -1,0 +1,32 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .item-container {
+    height: 100px;
+    width: 100px;
+    border: 1px solid gray;
+  }
+  
+  .item-container:nth-child(odd) {
+    background-color: green;
+  }
+  
+  .item-container:nth-child(even) {
+    background-color: blue;
+  }
+  
+  .item-container:hover {
+    background-color: yellow;
+  }
+  
+  .black-bg {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    border: 1px solid gray;
+  }
+  

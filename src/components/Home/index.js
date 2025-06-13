@@ -69,6 +69,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("limit-infinite-list")}>Limit Infinite List</button>
       <button onClick={() => handlenavigate("undoable-counter")}>Undoable Counter</button>
       <button onClick={() => handlenavigate("password-validator")}>Password Validator</button>
+      <button onClick={() => handlenavigate("grid-color")}>Grid Color</button>
     </div>
   );
 };
