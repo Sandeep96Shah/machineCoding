@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .tags-container {
+    display: flex;
+    gap: 20px;
+  }
+  .title {
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .tag {
+    background-color: antiquewhite;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: gray;
+  }
+  
+  .user-id {
+    width: 100%;
+    text-align: right;
+    color: gray;
+  }
+  
