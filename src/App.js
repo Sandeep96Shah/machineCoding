@@ -46,6 +46,7 @@ import LimitInfiniteList from "./components/LimitInfiniteList";
 import UndoableCounter from "./components/UndoableCounter";
 import PasswordValidator from "./components/PasswordValidator";
 import GridColor from "./components/GridColor";
+import List from "./components/List";
 
 function App() {
   return (
@@ -100,6 +101,7 @@ function App() {
         <Route path="undoable-counter" element={<UndoableCounter />} />
         <Route path="password-validator" element={<PasswordValidator />} />
         <Route path="grid-color" element={<GridColor />} />
+        <Route path="p-s-list" element={<List />} />
       </Routes>
       
     </div>

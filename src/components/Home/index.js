@@ -70,6 +70,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("undoable-counter")}>Undoable Counter</button>
       <button onClick={() => handlenavigate("password-validator")}>Password Validator</button>
       <button onClick={() => handlenavigate("grid-color")}>Grid Color</button>
+      <button onClick={() => handlenavigate("p-s-list")}>Publicis Sapient</button>
     </div>
   );
 };
