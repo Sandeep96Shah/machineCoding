@@ -5,6 +5,7 @@ const Guess = ({
   nthAttempt,
   correctWord,
   handleCurrentAttempt,
+  isCorrect
 }) => {
   const [word, setWord] = useState("");
   const inputRef = useRef(null);
@@ -14,8 +15,8 @@ const Guess = ({
 
   const handleOnChange = (event) => {
     const guessWord = event.target.value;
-    // console.log(guessWord, word);
-    if (guessWord.length <= 5) setWord(guessWord);
+    if (guessWord.length <= 5 && guessWord.length > word.length)
+      setWord(guessWord);
   };
 
   const checkCharacter = (index) => {
@@ -32,7 +33,7 @@ const Guess = ({
   }, [word, isChecked, handleCurrentAttempt]);
 
   useEffect(() => {
-    if (currentAttempt === nthAttempt) {
+    if (currentAttempt === nthAttempt && !isCorrect) {
       inputRef.current.focus();
     }
   }, [currentAttempt, nthAttempt]);

@@ -10,10 +10,8 @@ const GuessWord = () => {
   const guessChances = new Array(6).fill("");
 
   const handleCurrentAttempt = (word) => {
-    if (word === correctWord) {
-      setIsCorrect(true);
-    //   setCurrentAttempt(-1);
-    } else setCurrentAttempt((prevAttempt) => prevAttempt + 1);
+    if (word === correctWord) setIsCorrect(true);
+    else setCurrentAttempt((prevAttempt) => prevAttempt + 1);
   };
 
   useEffect(() => {
@@ -37,6 +35,7 @@ const GuessWord = () => {
           correctWord={correctWord}
           nthAttempt={index}
           handleCurrentAttempt={handleCurrentAttempt}
+          isCorrect={isCorrect}
         />
       ))}
     </div>
