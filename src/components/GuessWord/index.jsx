@@ -27,7 +27,7 @@ const GuessWord = () => {
 
   console.log(correctWord);
   return (
-    <div>
+    <div className="guess-chances-container">
       {guessChances.map((_, index) => (
         <Guess
           key={index}

@@ -1,3 +1,9 @@
+.guess-chances-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .guess-word {
     display: flex;
     gap: 20px;

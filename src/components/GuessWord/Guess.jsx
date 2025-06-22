@@ -9,7 +9,6 @@ const Guess = ({
 }) => {
   const [word, setWord] = useState("");
   const inputRef = useRef(null);
-  const isChecked = useRef(false);
 
   const wordLength = new Array(5).fill("");
 
@@ -26,11 +25,10 @@ const Guess = ({
   };
 
   useEffect(() => {
-    if (word.length === 5 && !isChecked.current) {
-      isChecked.current = true;
+    if (word.length === 5 && currentAttempt === nthAttempt ) {
       handleCurrentAttempt(word);
     }
-  }, [word, isChecked, handleCurrentAttempt]);
+  }, [word, handleCurrentAttempt]);
 
   useEffect(() => {
     if (currentAttempt === nthAttempt && !isCorrect) {
