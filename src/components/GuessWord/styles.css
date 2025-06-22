@@ -1,0 +1,29 @@
+.guess-word {
+    display: flex;
+    gap: 20px;
+}
+
+.each-character {
+    height: 50px;
+    width: 50px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.is-correct {
+    background-color: green;
+}
+
+.is-present {
+    background-color: yellow;
+}
+
+.input-field {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+}

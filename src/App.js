@@ -48,6 +48,7 @@ import PasswordValidator from "./components/PasswordValidator";
 import GridColor from "./components/GridColor";
 import List from "./components/List";
 import PSCounter from "./components/PS-Counter";
+import GuessWord from "./components/GuessWord";
 
 function App() {
   return (
@@ -104,6 +105,7 @@ function App() {
         <Route path="grid-color" element={<GridColor />} />
         <Route path="p-s-list" element={<List />} />
         <Route path="p-s-counter" element={<PSCounter />} />
+        <Route path="guess-word" element={<GuessWord />} />
       </Routes>
       
     </div>
