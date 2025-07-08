@@ -74,6 +74,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("p-s-counter")}>Publicis Sapient Counter</button>
       <button onClick={() => handlenavigate("guess-word")}>Guess Word</button>
       <button onClick={() => handlenavigate("debounce-search")}>Debounce Search</button>
+      <button onClick={() => handlenavigate("throttling-scroll")}>Throttling Scroll</button>
     </div>
   );
 };
