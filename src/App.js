@@ -49,6 +49,7 @@ import GridColor from "./components/GridColor";
 import List from "./components/List";
 import PSCounter from "./components/PS-Counter";
 import GuessWord from "./components/GuessWord";
+import DebounceComp from "./Interview/Debounce";
 
 function App() {
   return (
@@ -106,6 +107,7 @@ function App() {
         <Route path="p-s-list" element={<List />} />
         <Route path="p-s-counter" element={<PSCounter />} />
         <Route path="guess-word" element={<GuessWord />} />
+        <Route path="debounce-search" element={<DebounceComp />} />
       </Routes>
       
     </div>
