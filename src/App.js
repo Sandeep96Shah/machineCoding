@@ -51,6 +51,7 @@ import PSCounter from "./components/PS-Counter";
 import GuessWord from "./components/GuessWord";
 import DebounceComp from "./Interview/Debounce";
 import ThrottlingComp from "./Interview/Throttling";
+import Parent from "./components/Memoized";
 
 function App() {
   return (
@@ -110,6 +111,7 @@ function App() {
         <Route path="guess-word" element={<GuessWord />} />
         <Route path="debounce-search" element={<DebounceComp />} />
         <Route path="throttling-scroll" element={<ThrottlingComp />} />
+        <Route path="memoized-react-memo" element={<Parent />} />
       </Routes>
       
     </div>
