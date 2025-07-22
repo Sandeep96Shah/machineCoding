@@ -52,6 +52,7 @@ import GuessWord from "./components/GuessWord";
 import DebounceComp from "./Interview/Debounce";
 import ThrottlingComp from "./Interview/Throttling";
 import Parent from "./components/Memoized";
+import RetryFetch from "./components/RetryFetch";
 
 function App() {
   return (
@@ -112,6 +113,7 @@ function App() {
         <Route path="debounce-search" element={<DebounceComp />} />
         <Route path="throttling-scroll" element={<ThrottlingComp />} />
         <Route path="memoized-react-memo" element={<Parent />} />
+        <Route path="retry-fetch-fail" element={<RetryFetch />} />
       </Routes>
       
     </div>
