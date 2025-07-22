@@ -75,6 +75,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("guess-word")}>Guess Word</button>
       <button onClick={() => handlenavigate("debounce-search")}>Debounce Search</button>
       <button onClick={() => handlenavigate("throttling-scroll")}>Throttling Scroll</button>
+      <button onClick={() => handlenavigate("memoized-react-memo")}>React memo</button>
     </div>
   );
 };
