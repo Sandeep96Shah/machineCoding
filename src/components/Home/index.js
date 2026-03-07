@@ -77,6 +77,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("throttling-scroll")}>Throttling Scroll</button>
       <button onClick={() => handlenavigate("memoized-react-memo")}>React memo</button>
       <button onClick={() => handlenavigate("retry-fetch-fail")}>Retry Fetch Fail</button>
+      <button onClick={() => handlenavigate("comments-replies-list")}>Comments Replies List</button>
     </div>
   );
 };
