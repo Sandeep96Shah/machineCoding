@@ -1,0 +1,21 @@
+.commentContent {
+    padding-left: 30px;
+    width: 400px;
+    margin: 10px;
+}
+
+.commentBox {
+    text-align: left;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.commentActions {
+    display: flex;
+    gap: 10px;
+
+    button {
+        cursor: pointer;
+    }
+}
