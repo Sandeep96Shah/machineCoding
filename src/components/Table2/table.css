@@ -1,0 +1,34 @@
+.table2-wrapper{
+    width: 90vw;
+}
+
+.table2-header{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.table2-container {
+    height: 60vh;
+    overflow: auto;
+    width: 100%;
+
+    th{
+        background: lightgray;
+        position: sticky;
+        top: 0;
+    }
+
+}
+
+.table2-body{
+    height: 50vh;
+    overflow: auto;
+}
+
+.action2-btns {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}

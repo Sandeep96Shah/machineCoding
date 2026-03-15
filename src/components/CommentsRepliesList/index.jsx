@@ -29,7 +29,7 @@ const CommentsRepliesList = () => {
             content: content,
           };
         } else {
-          return {};
+          return null;
         }
       }
       if (item.replies && item.replies.length) {
@@ -39,7 +39,7 @@ const CommentsRepliesList = () => {
         };
       }
       return item;
-    });
+    }).filter(Boolean);
   };
 
   const addReply = (id) => {

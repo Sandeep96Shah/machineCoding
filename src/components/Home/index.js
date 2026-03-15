@@ -78,6 +78,7 @@ const Home = () => {
       <button onClick={() => handlenavigate("memoized-react-memo")}>React memo</button>
       <button onClick={() => handlenavigate("retry-fetch-fail")}>Retry Fetch Fail</button>
       <button onClick={() => handlenavigate("comments-replies-list")}>Comments Replies List</button>
+      <button onClick={() => handlenavigate("table-2")}>Table 2</button>
     </div>
   );
 };
