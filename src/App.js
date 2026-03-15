@@ -53,6 +53,8 @@ import DebounceComp from "./Interview/Debounce";
 import ThrottlingComp from "./Interview/Throttling";
 import Parent from "./components/Memoized";
 import RetryFetch from "./components/RetryFetch";
+import CommentsRepliesList from "./components/CommentsRepliesList";
+import Table2 from "./components/Table2";
 
 function App() {
   return (
@@ -114,6 +116,8 @@ function App() {
         <Route path="throttling-scroll" element={<ThrottlingComp />} />
         <Route path="memoized-react-memo" element={<Parent />} />
         <Route path="retry-fetch-fail" element={<RetryFetch />} />
+        <Route path="comments-replies-list" element={<CommentsRepliesList />} />
+        <Route path="table-2" element={<Table2 />} />
       </Routes>
       
     </div>
