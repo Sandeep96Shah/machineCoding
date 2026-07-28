@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <button onClick={() => handlenavigate("otp-input")}>OTP Input</button>
+      <button onClick={() => handlenavigate("otp-input-new")}>OTP NEW Input</button>
       <button onClick={() => handlenavigate("tab-form")}>Tab Form</button>
       <button onClick={() => handlenavigate("table-pagination")}>
         Table Pagination

@@ -55,6 +55,7 @@ import Parent from "./components/Memoized";
 import RetryFetch from "./components/RetryFetch";
 import CommentsRepliesList from "./components/CommentsRepliesList";
 import Table2 from "./components/Table2";
+import OTPNEW from "./components/OTP/indexNew";
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/otp-input" element={<OTP />} />
+        <Route path="/otp-input-new" element={<OTPNEW />} />
         <Route path="tab-form" element={<TabForm />} />
         <Route path="table-pagination" element={<TablePagination />} />
         <Route path="auto-complete" element={<AutoComplete />} />
