@@ -41,6 +41,7 @@ import TabForm2 from "./components/TabForm2";
 import TicTacToe from "./components/TicTacToe";
 import ListInfiniteScroll from "./components/ListInfiniteScroll";
 import FileExplorer from "./components/FileExplorer";
+import FileExplorerNew from "./components/FileExplorer/index1";
 import JobBoard from "./components/JobBoard";
 import LimitInfiniteList from "./components/LimitInfiniteList";
 import UndoableCounter from "./components/UndoableCounter";
@@ -106,6 +107,7 @@ function App() {
         <Route path="tic-tac-toe" element={<TicTacToe />} />
         <Route path="list-infinite-scroll" element={<ListInfiniteScroll />} />
         <Route path="file-explorer-1" element={<FileExplorer />} />
+        <Route path="file-explorer-1-NEW" element={<FileExplorerNew />} />
         <Route path="job-board" element={<JobBoard />} />
         <Route path="limit-infinite-list" element={<LimitInfiniteList />} />
         <Route path="undoable-counter" element={<UndoableCounter />} />
