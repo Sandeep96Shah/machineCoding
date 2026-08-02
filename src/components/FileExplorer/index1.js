@@ -4,10 +4,10 @@
 // add event handler to expand or collapse
 
 import { useState, useCallback } from "react";
+import TreeNode from "./TreeNode";
 import { data } from "./constants";
 
 const FileExplorer = () => {
-  const [openIds, setOpenIds] = useState({});
   const [expandedFolders, setExpandedFolders] = useState(new Set());
 
   const getDescendants = (children = [], ids = []) => {
@@ -40,29 +40,17 @@ const FileExplorer = () => {
     });
   }, []);
 
-  const getPrefix = ({ id, hasChildren }) => {
-    if (!hasChildren) return;
-    return expandedFolders.has(id) ? "-" : "+";
-  };
-  const renderItem = (item) => {
-    return item.map(({ id, name, children }) => (
-      <div style={{ paddingLeft: "10px" }}>
-        <p onClick={() => toggleFolder({ id, children })}>
-          <span>
-            {getPrefix({ id, hasChildren: children && children.length })}
-          </span>
-          {name}
-        </p>
-        {children && children.length && expandedFolders.has(id)
-          ? renderItem(children)
-          : null}
-      </div>
-    ));
-  };
   return (
     <div>
       <h1>File Explorer</h1>
-      {renderItem(data)}
+      {data.map((node) => (
+        <TreeNode
+          key={node.id}
+          node={node}
+          toggleFolder={toggleFolder}
+          expandedFolders={expandedFolders}
+        />
+      ))}
     </div>
   );
 };
