@@ -1,8 +1,10 @@
-// get the structure
-// display with dummy data
-// show symbol to collapse or expand
-// add event handler to expand or collapse
-
+// High-Level Approach
+// 1. Render the file/folder hierarchy recursively using the TreeNode component.
+// 2. Store the expanded folder ids in a Set for O(1) lookup, insertion, and deletion.
+// 3. Clicking a folder toggles its expanded/collapsed state.
+// 4. When collapsing a folder, recursively collect all descendant folder/file ids
+//    and remove them from the expanded state so reopening the parent starts with
+//    all nested folders collapsed.
 import { useState, useCallback } from "react";
 import TreeNode from "./TreeNode";
 import { data } from "./constants";

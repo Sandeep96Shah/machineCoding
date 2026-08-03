@@ -7,7 +7,7 @@ const TreeNode = ({ node, toggleFolder, expandedFolders }) => {
   return (
     <div style={{ marginLeft: "20px" }}>
       <button onClick={() => hasChildren && toggleFolder(node)}>
-        {hasChildren ? (isExpanded ? "📂" : "📁") : "📄"} {node.name}
+        {hasChildren ? (isExpanded ? "📂" : "📁") : "📄"} {name}
       </button>
       {hasChildren && isExpanded && (
         <div>
