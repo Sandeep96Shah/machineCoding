@@ -57,6 +57,7 @@ import RetryFetch from "./components/RetryFetch";
 import CommentsRepliesList from "./components/CommentsRepliesList";
 import Table2 from "./components/Table2";
 import OTPNEW from "./components/OTP/indexNew";
+import Replies from "./components/Replies";
 
 function App() {
   return (
@@ -122,6 +123,7 @@ function App() {
         <Route path="retry-fetch-fail" element={<RetryFetch />} />
         <Route path="comments-replies-list" element={<CommentsRepliesList />} />
         <Route path="table-2" element={<Table2 />} />
+        <Route path="replies" element={<Replies />} />
       </Routes>
       
     </div>
